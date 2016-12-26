@@ -1,0 +1,104 @@
+body
+{
+    font-family: SansSerif ;
+}
+.telo
+{
+    width: 150px;
+    height: 150px;
+    margin: 25px;
+    float: left;
+}
+#green-circle
+{
+    background-color: green;
+    border-radius: 50%;
+    margin: 25px;
+}
+.red-square
+{
+
+    background-color: red;
+
+}
+#hidden
+{
+    display: none;
+}
+label
+{
+    font-size: 140%;
+    position: relative;
+    top: 7px;
+    float: left;
+    width: 180px;
+}
+input
+{
+    height: 25px;
+    padding: 5px 5px 10px 10px;
+    font-size: 20px;
+    border: 1px solid grey;
+}
+.form-element
+{
+    margin: 5px;
+}
+#submitButton
+{
+    width: 100px;
+    height: 40px;
+
+    margin-left: 150px;
+    font-size: 20px;
+}
+.ui-widget-content
+{
+    width: 300px;
+}
+#containment-wrapper
+{
+    width: 95%;
+    height:150px;
+    border:2px solid #ccc;
+    padding: 10px;
+}
+#resizable
+{
+    width: 150px;
+    height: 150px;
+    padding: 0.5em;
+}
+#yelow-sqare
+{
+    width: 390px;
+    height: 390px;
+    background-color: yellow;
+    margin: 50px;
+
+    float: left;
+}
+#accord
+{
+    width: 500px;
+}
+#sortable
+{
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    width: 60%;
+}
+#sortable li
+{
+    margin: 0 3px 3px 3px;
+    padding: 0.4em;
+    padding-left: 1.5em;
+    font-size: 1.4em;
+    height: 18px;
+}
+#sortable li span
+{
+    position: absolute;
+    margin-left: -1.3em;
+}

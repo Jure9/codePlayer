@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Player</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="css/codePlayer.css">
+</head>
+<body>
+
+<header id="header">
+
+    <h2 id="title">CodePlayer</h2>
+
+    <div id="button-container">
+
+        <button id="html">HTML</button>
+        <button id="css">CSS</button>
+        <button id="javaScript">JavaScript</button>
+        <button id="output">Output</button>
+
+    </div>
+
+
+</header>
+
+<div class="panel-holder">
+
+    <textarea id="html-panel" class="panel"></textarea>
+
+    <textarea id="css-panel" class="panel"></textarea>
+
+    <textarea id="js-panel" class="panel"></textarea>
+
+    <iframe id="output-panel" class="panel">sreth</iframe>
+
+</div>
+
+<script type="text/javascript">
+
+    //window height
+
+    var wid=4;
+    var hgh=$(window).height()-48;
+
+    $(".panel").css("height", hgh);
+
+
+
+    //displaying panels
+
+    $("#html").click(function () {
+        if ($("#html-panel").css("display") == "none") {
+            $("#html-panel").fadeIn();
+            wid++;
+            $(".panel").css("width", ($(window).width()/wid)-5);
+        }
+        else {
+            $("#html-panel").fadeOut();
+            wid--;
+            $(".panel").css("width", ($(window).width()/wid)-10);
+        }
+    });
+
+    $("#css").click(function () {
+        if ($("#css-panel").css("display") == "none") {
+            $("#css-panel").fadeIn();
+            wid++;
+            $(".panel").css("width", ($(window).width()/wid)-5);
+        }
+        else {
+            $("#css-panel").fadeOut();
+            wid--;
+            $(".panel").css("width", ($(window).width()/wid)-10);
+        }
+    });
+
+    $("#javaScript").click(function () {
+        if ($("#js-panel").css("display") == "none") {
+            $("#js-panel").fadeIn();
+            wid++;
+            $(".panel").css("width", ($(window).width()/wid)-5);
+        }
+        else {
+            $("#js-panel").fadeOut();
+            wid--;
+            $(".panel").css("width", ($(window).width()/wid)-10);
+        }
+
+
+    });
+    $("#output").click(function () {
+        if ($("#output-panel").css("display") == "none") {
+            $("#output-panel").fadeIn();
+            wid++;
+            $(".panel").css("width", ($(window).width()/wid)-5);
+        }
+        else {
+            $("#output-panel").fadeOut();
+            wid--;
+            $(".panel").css("width", ($(window).width()/wid)-10);
+        }
+    });
+
+    //coloring buttons
+
+    var isHtmlRed=false;
+    $("#html").click(function()
+    {
+        if(isHtmlRed)
+        {
+            $(this).css('color', 'black');
+            isHtmlRed=false;
+        }
+        else
+        {
+            $(this).css('color', 'grey');
+            isHtmlRed=true;
+        }
+    });
+    var isCssRed=false;
+    $("#css").click(function()
+    {
+        if(isCssRed)
+        {
+            $(this).css('color', 'black');
+            isCssRed=false;
+        }
+        else
+        {
+            $(this).css('color', 'grey');
+            isCssRed=true;
+        }
+    });
+    var isJsRed=false;
+    $("#javaScript").click(function()
+    {
+        if(isJsRed)
+        {
+            $(this).css('color', 'black');
+            isJsRed=false;
+        }
+        else
+        {
+            $(this).css('color', 'grey');
+            isJsRed=true;
+        }
+    });
+    var isOutRed=false;
+    $("#output").click(function()
+    {
+        if(isOutRed)
+        {
+            $(this).css('color', 'black');
+            isOutRed=false;
+        }
+        else
+        {
+            $(this).css('color', 'grey');
+            isOutRed=true;
+        }
+    });
+
+    //output
+
+    $('textarea').keyup(function() {
+        $("#output-panel").contents().find("html").html("<html><head><style type='text/css'>" + $("#css-panel").val()
+        + "</style></head><body> " + $("#html-panel").val() + "</body></html>");
+    });
+
+
+    $(".panel").css("width", ($(window).width()/wid)-17);
+
+
+
+</script>
+
+</body>
+</html>

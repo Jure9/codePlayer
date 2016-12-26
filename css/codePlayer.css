@@ -1,0 +1,64 @@
+body
+{
+    margin:0px;
+    padding: 0px;
+}
+#header
+{
+    width: 99%;
+    background-color: lightgrey;
+    height: 35px;
+    padding: 5px;
+    margin: 0px;
+
+}
+#title
+{
+
+    font-family: sans-serif;
+    float: left;
+    margin-top: 0px;
+}
+#button-container
+{
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+button
+{
+    float: left;
+}
+
+.panel-holder
+{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+
+}
+.panel
+{
+    height:594px;
+
+
+    margin: 0px;
+    padding: 0px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+.red
+{
+    background-color:red;
+}
+textarea {
+    resize: none;
+    border-color: gray;
+}
+iframe
+{
+    border: none;
+}
